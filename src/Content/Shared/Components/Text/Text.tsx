@@ -27,7 +27,7 @@ const TextBody: React.FC<PropsType> = (props) => {
         {
           color: props.color || 'black',
           fontSize: props.size || 15,
-          fontWeight: props.isBold ? 'bold' : '500',
+          fontFamily: props.isBold ? 'Bold' : 'Light',
           textAlign: props.isCenterAlign && 'center',
           lineHeight: props.lineHeight,
         },

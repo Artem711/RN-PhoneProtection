@@ -1,5 +1,9 @@
 apply plugin: "com.android.application"
 
+
+apply from: '../../node_modules/react-native-unimodules/gradle.groovy'
+
+
 import com.android.build.OutputFile
 
 /**
@@ -191,10 +195,12 @@ dependencies {
 implementation project(':react-native-camera')
   compile 'com.android.support:multidex:1.0.1' //enter the latest version
 
+    addUnimodulesDependencies()
 
     debugImplementation("com.facebook.flipper:flipper:${FLIPPER_VERSION}") {
       exclude group:'com.facebook.fbjni'
     }
+
 
     debugImplementation("com.facebook.flipper:flipper-network-plugin:${FLIPPER_VERSION}") {
         exclude group:'com.facebook.flipper'

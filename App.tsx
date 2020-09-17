@@ -38,10 +38,10 @@ const App = () => {
   const Stack = createStackNavigator();
 
   const getData = async () => {
-    // await Font.loadAsync({
-    //   Light: require('./assets/Fonts/Montserrat-Regular.ttf'),
-    //   Bold: require('./assets/Fonts/Montserrat-Medium.ttf'),
-    // });
+    await Font.loadAsync({
+      Light: require('./assets/Fonts/Montserrat-Regular.ttf'),
+      Bold: require('./assets/Fonts/Montserrat-Medium.ttf'),
+    });
 
     if (await AsyncStorage.getItem('appUsed')) {
       setAppLaunched(true);
