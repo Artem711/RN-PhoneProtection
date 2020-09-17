@@ -1,6 +1,6 @@
 // PLUGINS IMPORTS //
 import React, {useState, useEffect} from 'react';
-import {View, TouchableOpacity, StyleSheet} from 'react-native';
+import {ImageBackground, TouchableOpacity, StyleSheet} from 'react-native';
 import Text from '~/Content/Shared/Components/Text/Text';
 import {useNavigation} from '@react-navigation/native';
 
@@ -30,7 +30,9 @@ const MultiTouchScreen = () => {
   }, [state]);
 
   return (
-    <View style={styles.wrapper}>
+    <ImageBackground
+      style={styles.wrapper}
+      source={require('~/Images/punctir.png')}>
       <Text size={24} isCenterAlign color={'#AAAAAA'}>
         Торкайся одночасно декількома пальцями до екрану
       </Text>
@@ -62,7 +64,7 @@ const MultiTouchScreen = () => {
           state.selected3 && styles.filled_circle,
         ]}
       />
-    </View>
+    </ImageBackground>
   );
 };
 
