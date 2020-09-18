@@ -9,6 +9,7 @@ import Text from '~/Content/Shared/Components/Text/Text';
 
 /////////////////////////////////////////////////////////////////////////////
 type PropsType = {
+  isCenterAlign?: boolean;
   removeUppercase?: boolean;
   backgroundColor?: string;
   textColor?: string;
@@ -25,6 +26,7 @@ const Button: React.FC<PropsType> = (props) => {
       style={[
         styles.wrapper,
         {
+          alignSelf: props.isCenterAlign && 'center',
           backgroundColor: props.backgroundColor || '#FFC107',
         },
         props.style,

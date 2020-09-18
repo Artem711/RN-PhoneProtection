@@ -30,7 +30,6 @@ const Header = () => {
 const styles = StyleSheet.create({
   wrapper: {
     marginHorizontal: 20,
-    flex: 1,
   },
 
   title: {

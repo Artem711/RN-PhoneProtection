@@ -13,7 +13,7 @@ import AbsoluteSection from './AbsoluteSection/AbsoluteSection';
 
 const {height} = Dimensions.get('screen');
 
-const blocksCount = Math.round(height / 11.56);
+const blocksCount = Math.round((height / 67) * 6);
 const ScreenCheckScreen = () => {
   const [selectedIndexes, setSelectedIndexes] = useState([] as Array<number>);
 

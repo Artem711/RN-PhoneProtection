@@ -1,6 +1,6 @@
 // PLUGINS IMPORTS //
 import React, {useEffect, useState} from 'react';
-import {View, Image, StyleSheet} from 'react-native';
+import {ScrollView, Image, StyleSheet} from 'react-native';
 import Text from '~/Content/Shared/Components/Text/Text';
 import Button from '~/Content/Shared/Components/Buttons/Button/Button';
 
@@ -102,7 +102,7 @@ const MainScreen: React.FC<PropsType> = (props) => {
 
   const data = renderData();
   return (
-    <View style={styles.wrapper}>
+    <ScrollView style={styles.wrapper}>
       <Body data={data} isCarousel={isCarousel} />
       <Button
         text={'Разпочати'}
@@ -110,16 +110,15 @@ const MainScreen: React.FC<PropsType> = (props) => {
         onPress={() =>
           props.navigation.navigate(data?.navigationDest as string)
         }
+        isCenterAlign
       />
-    </View>
+    </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
   wrapper: {
-    alignItems: 'center',
-    justifyContent: 'space-evenly',
-    marginHorizontal: 20,
+    paddingHorizontal: 20,
   },
 
   image: {

@@ -15,12 +15,14 @@ const SlideItem: React.FC<PropsType> = (props) => {
   return (
     <View style={styles.wrapper}>
       <Image source={props.item.image} style={styles.image} />
-      <Text size={24} isBold isCenterAlign>
-        {props.item.title}
-      </Text>
-      <Text style={styles.sub_title} size={16} isCenterAlign>
-        {props.item.text}
-      </Text>
+      <View>
+        <Text size={24} isBold isCenterAlign>
+          {props.item.title}
+        </Text>
+        <Text style={styles.sub_title} size={16} isCenterAlign>
+          {props.item.text}
+        </Text>
+      </View>
     </View>
   );
 };
@@ -28,13 +30,16 @@ const SlideItem: React.FC<PropsType> = (props) => {
 const styles = StyleSheet.create({
   wrapper: {
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-evenly',
     marginHorizontal: 40,
+    flex: 1,
   },
 
   image: {
-    height: 500,
-    resizeMode: 'center',
+    width: 300,
+    maxHeight: 220,
+    resizeMode: 'contain',
+    flex: 1,
   },
 
   sub_title: {

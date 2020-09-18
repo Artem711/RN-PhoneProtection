@@ -1,6 +1,6 @@
 // PLUGINS IMPORTS //
 import React, {useState} from 'react';
-import {View, Image, StyleSheet} from 'react-native';
+import {ScrollView, View, Image, StyleSheet} from 'react-native';
 import Text from '~/Content/Shared/Components/Text/Text';
 import Button from '~/Content/Shared/Components/Buttons/Button/Button';
 
@@ -21,8 +21,8 @@ const TestResultScreen: React.FC<PropsType> = (props) => {
 
   return (
     <>
-      <View style={styles.wrapper}>
-        <View style={{flex: 3.3}}>
+      <ScrollView style={styles.wrapper}>
+        <View style={styles.content}>
           <Image
             style={styles.image}
             source={
@@ -38,29 +38,30 @@ const TestResultScreen: React.FC<PropsType> = (props) => {
           </Text>
         </View>
 
-        <View style={{flex: 1}}>
+        <View>
           <Button
             text={isSuccess ? 'Повний захист' : 'Повторити'}
             style={styles.button}
+            isCenterAlign
           />
           <Button
             text={'Повернутися'}
             backgroundColor={'transparent'}
             textColor={'#EDAB00'}
             onPress={() => setPopupVisible(true)}
+            isCenterAlign
           />
         </View>
-      </View>
+      </ScrollView>
 
       <Popup popupVisible={popupVisible} setPopupVisible={setPopupVisible} />
     </>
   );
 };
 
-const IMAGE_SIZE = 400;
+const IMAGE_SIZE = 375;
 const styles = StyleSheet.create({
   wrapper: {
-    alignItems: 'center',
     flex: 1,
   },
 
@@ -71,6 +72,10 @@ const styles = StyleSheet.create({
 
   title: {
     marginHorizontal: 60,
+  },
+
+  content: {
+    marginBottom: 20,
   },
 
   button: {

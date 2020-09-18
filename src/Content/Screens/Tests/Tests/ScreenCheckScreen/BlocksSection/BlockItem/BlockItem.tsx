@@ -19,8 +19,8 @@ const BlockItem: React.FC<PropsType> = (props) => {
       style={[
         styles.block,
         {
-          height: '8.01%',
-          width: '16.666%',
+          height: 65,
+          width: 62.5,
           backgroundColor: props.isSelected ? '#F6CE0E' : 'white',
         },
         ,

@@ -36,7 +36,7 @@ const Footer = () => {
             />
           );
         })}
-        <Button text={'Перейти'} style={styles.button} />
+        <Button text={'Перейти'} style={styles.button} isCenterAlign />
         <Text onPress={() => {}}>Відмінити підписку</Text>
       </View>
     </View>

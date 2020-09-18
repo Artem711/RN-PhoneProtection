@@ -47,10 +47,12 @@ const Popup: React.FC<PropsType> = (props) => {
             props.setPopupVisible(false);
             navigation.goBack();
           }}
+          isCenterAlign
         />
         <Button
           text={'Продовжити тест'}
           onPress={() => props.setPopupVisible(false)}
+          isCenterAlign
         />
       </DialogContent>
     </Dialog>
@@ -60,6 +62,7 @@ const Popup: React.FC<PropsType> = (props) => {
 const styles = StyleSheet.create({
   wrapper: {
     paddingVertical: 20,
+    width: '90%',
   },
 
   paragraph: {

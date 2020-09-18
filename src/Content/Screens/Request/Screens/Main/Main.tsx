@@ -1,6 +1,6 @@
 // PLUGINS IMPORTS //
 import React from 'react';
-import {View, StyleSheet} from 'react-native';
+import {ScrollView, View, StyleSheet} from 'react-native';
 
 // COMPONENTS IMPORTS /
 import Header from './Header/Header';
@@ -13,18 +13,23 @@ import Footer from './Footer/Footer';
 
 const Main = () => {
   return (
-    <View style={styles.wrapper}>
-      <Header />
-      <Body />
-      <Footer />
-    </View>
+    <ScrollView style={styles.wrapper}>
+      <View style={styles.container}>
+        <Header />
+        <Body />
+        <Footer />
+      </View>
+    </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
   wrapper: {
     marginHorizontal: 15,
-    marginTop: 32,
+  },
+
+  container: {
+    marginVertical: 20,
   },
 });
 

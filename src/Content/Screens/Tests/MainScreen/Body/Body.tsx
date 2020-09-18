@@ -38,7 +38,7 @@ const SlideItem: React.FC<any> = (props) => {
         />
       )}
 
-      <Text lineHeight={24} isCenterAlign style={styles.text}>
+      <Text style={styles.text} isCenterAlign>
         {props.data?.text}
       </Text>
     </>
@@ -78,14 +78,14 @@ const Body: React.FC<PropsType> = (props) => {
 const styles = StyleSheet.create({
   image: {
     resizeMode: 'contain',
-    height: 340,
+    height: 300,
     width: '100%',
     marginTop: 20,
     marginBottom: '10%',
   },
 
   text: {
-    marginHorizontal: 10,
+    marginRight: 30,
   },
 
   pagination: {

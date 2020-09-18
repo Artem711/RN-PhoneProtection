@@ -1,6 +1,6 @@
 // PLUGINS IMPORTS //
 import React from 'react';
-import {StyleSheet} from 'react-native';
+import {ScrollView, StyleSheet} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 
 // COMPONENTS IMPORTS //
@@ -14,8 +14,10 @@ import Body from './Body/Body';
 const ThanksScreen = () => {
   return (
     <SafeAreaView style={styles.wrapper}>
-      <Header />
-      <Body />
+      <ScrollView>
+        <Header />
+        <Body />
+      </ScrollView>
     </SafeAreaView>
   );
 };

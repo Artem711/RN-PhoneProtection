@@ -41,7 +41,9 @@ const Body = () => {
 
 const ICON_SIZE = 40;
 const styles = StyleSheet.create({
-  wrapper: {},
+  wrapper: {
+    flex: 1,
+  },
 
   button: {
     width: 244,
