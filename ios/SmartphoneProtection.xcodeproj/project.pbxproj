@@ -20,6 +20,7 @@
 		7CE12C4B5B8A71B8E184275C /* libPods-SmartphoneProtection.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ABF8C78F4AEF6BE41B3FDA2 /* libPods-SmartphoneProtection.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		9CCDCC4C8BBCEE3D6B37396B /* libPods-SmartphoneProtection-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB73168FD57E45F4F1F3A2AE /* libPods-SmartphoneProtection-tvOS.a */; };
+		ACA4F8702519FFAF0045F4A5 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA4F86F2519FFAF0045F4A5 /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		70EA9ADCCE4C22C2DB33B3D4 /* Pods-SmartphoneProtection-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartphoneProtection-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-SmartphoneProtection-tvOSTests/Pods-SmartphoneProtection-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8135352F7B9EEF6057FBBBFE /* Pods-SmartphoneProtection-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartphoneProtection-tvOS.release.xcconfig"; path = "Target Support Files/Pods-SmartphoneProtection-tvOS/Pods-SmartphoneProtection-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = SmartphoneProtection/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ACA4F86E2519FFAF0045F4A5 /* SmartphoneProtection-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SmartphoneProtection-Bridging-Header.h"; sourceTree = "<group>"; };
+		ACA4F86F2519FFAF0045F4A5 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		B434B6352F051D909E2F93A7 /* Pods-SmartphoneProtection-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartphoneProtection-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-SmartphoneProtection-tvOS/Pods-SmartphoneProtection-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		BDC1617089525228FA1BD97A /* Pods-SmartphoneProtection-SmartphoneProtectionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartphoneProtection-SmartphoneProtectionTests.release.xcconfig"; path = "Target Support Files/Pods-SmartphoneProtection-SmartphoneProtectionTests/Pods-SmartphoneProtection-SmartphoneProtectionTests.release.xcconfig"; sourceTree = "<group>"; };
 		C9DAF9C2F93E3B82DC0E54AB /* Pods-SmartphoneProtection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartphoneProtection.debug.xcconfig"; path = "Target Support Files/Pods-SmartphoneProtection/Pods-SmartphoneProtection.debug.xcconfig"; sourceTree = "<group>"; };
@@ -174,6 +177,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				ACA4F86F2519FFAF0045F4A5 /* File.swift */,
 				AC4FE3D22513A7A600900E48 /* Resources */,
 				13B07FAE1A68108700A75B9A /* SmartphoneProtection */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
@@ -181,6 +185,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				3DC42CF29760F7372D1D76E1 /* Pods */,
+				ACA4F86E2519FFAF0045F4A5 /* SmartphoneProtection-Bridging-Header.h */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -301,7 +306,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1200;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -640,6 +645,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				ACA4F8702519FFAF0045F4A5 /* File.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -681,6 +687,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EB4F37FD846800EB38DA6431 /* Pods-SmartphoneProtection-SmartphoneProtectionTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -704,6 +711,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BDC1617089525228FA1BD97A /* Pods-SmartphoneProtection-SmartphoneProtectionTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = SmartphoneProtectionTests/Info.plist;
@@ -737,6 +745,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = SmartphoneProtection;
+				SWIFT_OBJC_BRIDGING_HEADER = "SmartphoneProtection-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -759,6 +768,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = SmartphoneProtection;
+				SWIFT_OBJC_BRIDGING_HEADER = "SmartphoneProtection-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

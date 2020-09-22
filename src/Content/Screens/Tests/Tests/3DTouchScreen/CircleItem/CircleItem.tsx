@@ -1,6 +1,6 @@
 // PLUGINS IMPORTS //
 import React from 'react';
-import {TouchableOpacity, Image, StyleSheet} from 'react-native';
+import {TouchableOpacity, Image, StyleSheet, Dimensions} from 'react-native';
 import Text from '~/Content/Shared/Components/Text/Text';
 
 // COMPONENTS IMPORTS //
@@ -14,6 +14,8 @@ type PropsType = {
   state: any;
   setState: (newState: any) => void;
 };
+
+const {height} = Dimensions.get('screen');
 const CircleItem: React.FC<PropsType> = (props) => {
   const isSelected = props.state[props.value];
 
@@ -43,7 +45,7 @@ const CircleItem: React.FC<PropsType> = (props) => {
   );
 };
 
-const SIZE = 120;
+const SIZE = height / 7.5;
 const ICON_SIZE = 40;
 const styles = StyleSheet.create({
   wrapper: {

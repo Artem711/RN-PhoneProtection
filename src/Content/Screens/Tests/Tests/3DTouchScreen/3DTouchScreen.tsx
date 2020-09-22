@@ -46,6 +46,7 @@ const DTouchScreen = () => {
 const styles = StyleSheet.create({
   wrapper: {
     alignItems: 'center',
+    justifyContent: 'center',
   },
 });
 

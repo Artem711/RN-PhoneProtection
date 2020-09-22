@@ -1,5 +1,8 @@
 // PLUGINS IMPORTS //
-import React from 'react';
+import React, {useRef} from 'react';
+import {View} from 'react-native';
+// @ts-ignore
+import DrawView from 'react-native-draw-view';
 
 // COMPONENTS IMPORTS //
 import BlockItem from './BlockItem/BlockItem';
@@ -15,6 +18,8 @@ type PropsType = {
   setSelectedIndexes: (newSelectedIndexes: Array<number>) => void;
 };
 const BlocksSection: React.FC<PropsType> = (props) => {
+  let drawer = useRef(null);
+
   return (
     <>
       {[...Array(props.blocksCount)].map((k, index) => {
@@ -30,6 +35,16 @@ const BlocksSection: React.FC<PropsType> = (props) => {
           />
         );
       })}
+      {/* <View style={{flex: 1}}>
+        <DrawView
+          style={{flex: 1, backgroundColor: '#fff'}}
+          onRef={(el) => (drawer = el)}
+          color="#F6CE0E"
+          strokeWidth={60}
+          onSaved={(res) => console.log('Save', res.nativeEvent)}
+          onError={(error) => console.log('Error', error.nativeEvent)}
+        />
+      </View> */}
     </>
   );
 };

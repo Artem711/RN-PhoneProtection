@@ -32,7 +32,7 @@ const PhotoScreen: React.FC<PropsType> = (props) => {
       <RNCamera
         ref={camera}
         style={styles.preview}
-        type={RNCamera.Constants.Type.back}
+        type={'front'}
         flashMode={RNCamera.Constants.FlashMode.off}
         androidCameraPermissionOptions={{
           title: 'Permission to use camera',

@@ -1,7 +1,7 @@
 // PLUGINS IMPORTS //
 import React from 'react';
 import {Image, StyleSheet} from 'react-native';
-import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 // COMPONENTS IMPORTS //
 import Home from '~/Content/Screens/Home/Home';
@@ -16,14 +16,23 @@ import Request from '~/Content/Screens/Request/Request';
 type PropsType = {};
 
 const NavigationCenter: React.FC<PropsType> = (props) => {
-  const Tab = createMaterialBottomTabNavigator();
+  const Tab = createBottomTabNavigator();
 
   return (
     <Tab.Navigator
       initialRouteName="Finances"
-      barStyle={styles.tab_bar}
-      activeColor="#FFC107"
-      inactiveColor="#AAAAAA">
+      tabBarOptions={{
+        activeBackgroundColor: '#FFC107',
+        activeTintColor: 'white',
+        inactiveTintColor: 'gray',
+        labelStyle: {
+          marginBottom: 2,
+          marginTop: -2,
+        },
+        iconStyle: {
+          marginTop: 3,
+        },
+      }}>
       <Tab.Screen
         name="Home"
         component={Home}
